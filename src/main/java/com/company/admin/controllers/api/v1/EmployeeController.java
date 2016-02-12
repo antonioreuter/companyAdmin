@@ -2,6 +2,7 @@ package com.company.admin.controllers.api.v1;
 
 import com.company.admin.models.Employee;
 import com.company.admin.services.EmployeeService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,6 +23,7 @@ public class EmployeeController {
   @Autowired
   private EmployeeService employeeService;
 
+  @ApiOperation(value = "Show Employee", notes = "Searches an employee by id.")
   @RequestMapping(method = RequestMethod.GET, value = "/{id}")
   @ResponseBody
   public Employee show(@PathVariable("id") long id) {
@@ -29,6 +31,8 @@ public class EmployeeController {
     return employeeService.findById(id);
   }
 
+  @ApiOperation(value = "Search Employee by name", notes = "Searches an employee by name. If the pagination values PAGE and SIZE were empty, " +
+      "they will assume the respective default values: 0, 10. If the name param is empty, it will search for all the employees.")
   @RequestMapping(method = RequestMethod.GET)
   @ResponseBody
   public Page<Employee> employees(@RequestParam(name = "name", required = false) String name,
@@ -40,6 +44,8 @@ public class EmployeeController {
     return employeeService.findAllByName(name, pageable);
   }
 
+  @ApiOperation(value = "Search Employee by Company", notes = "Searches an employee by company. If the pagination values PAGE and SIZE were empty, " +
+      "they will assume the respective default values: 0, 10.")
   @RequestMapping(method = RequestMethod.GET, value = "/company/{companyId}")
   @ResponseBody
   public Page<Employee> employeesByCompany(@PathVariable("companyId") long companyId,
@@ -51,6 +57,7 @@ public class EmployeeController {
     return employeeService.findByCompanyId(companyId, pageable);
   }
 
+  @ApiOperation(value = "Save Employee", notes = "Saves a new employee.")
   @RequestMapping(method = RequestMethod.POST)
   @ResponseStatus(HttpStatus.CREATED)
   @ResponseBody
@@ -61,6 +68,7 @@ public class EmployeeController {
     return employee;
   }
 
+  @ApiOperation(value = "Update Employee", notes = "Updates an employee.")
   @RequestMapping(method = RequestMethod.PUT, value = "/{id}")
   @ResponseStatus(HttpStatus.OK)
   @ResponseBody
@@ -71,6 +79,7 @@ public class EmployeeController {
     return employee;
   }
 
+  @ApiOperation(value = "Delete Employee", notes = "Delete an employee.")
   @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
   @ResponseStatus(HttpStatus.OK)
   @ResponseBody

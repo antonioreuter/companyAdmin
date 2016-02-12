@@ -1,6 +1,7 @@
 package com.company.admin.services;
 
 import com.company.admin.controllers.exceptions.ResourceNotFoundException;
+import com.company.admin.controllers.exceptions.UnprocessableEntityException;
 import com.company.admin.models.Employee;
 import com.company.admin.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
+
+import javax.validation.ConstraintViolationException;
 
 /**
  * Created by aandra1 on 11/02/16.
@@ -51,7 +54,11 @@ public class EmployeeService {
 
   @Transactional
   public void save(Employee employee) {
-    employeeRepository.save(employee);
+    try {
+      employeeRepository.save(employee);
+    } catch (ConstraintViolationException cvex) {
+      throw new UnprocessableEntityException(cvex.getMessage(), cvex);
+    }
   }
 
   @Transactional

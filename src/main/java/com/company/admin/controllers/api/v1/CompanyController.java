@@ -2,6 +2,7 @@ package com.company.admin.controllers.api.v1;
 
 import com.company.admin.models.Company;
 import com.company.admin.services.CompanyService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,7 +23,8 @@ public class CompanyController {
   @Autowired
   private CompanyService companyService;
 
-
+  @ApiOperation(value = "Search Company", notes = "Searches a company by name. If the pagination values PAGE and SIZE were empty, " +
+      "they will assume the respective default values: 0, 10. If the name param is empty, it will search for all the companies.")
   @RequestMapping(method = RequestMethod.GET)
   @ResponseBody
   public Page<Company> search(@RequestParam(name = "name", required = false) String name,
@@ -33,6 +35,7 @@ public class CompanyController {
     return companyService.findAllByName(name, pageable);
   }
 
+  @ApiOperation(value = "Show Company", notes = "Searches a company by id.")
   @RequestMapping(method = RequestMethod.GET, value = "/{id}")
   @ResponseBody
   public Company show(@PathVariable("id") long id) {
@@ -41,6 +44,7 @@ public class CompanyController {
     return companyService.findById(id);
   }
 
+  @ApiOperation(value = "Save Company", notes = "Saves a new company.")
   @RequestMapping(method = RequestMethod.POST)
   @ResponseStatus(HttpStatus.CREATED)
   @ResponseBody
@@ -51,6 +55,7 @@ public class CompanyController {
     return company;
   }
 
+  @ApiOperation(value = "Update Company", notes = "Updates a company.")
   @RequestMapping(method = RequestMethod.PUT, value = "/{id}")
   @ResponseStatus(HttpStatus.OK)
   @ResponseBody
@@ -61,6 +66,7 @@ public class CompanyController {
     return company;
   }
 
+  @ApiOperation(value = "Delete Company", notes = "Delete a company.")
   @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
   @ResponseStatus(HttpStatus.OK)
   @ResponseBody
