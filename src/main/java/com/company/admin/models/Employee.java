@@ -35,7 +35,7 @@ public class Employee implements Serializable {
   private String email;
 
   private String phoneNumber;
-  
+
   @ManyToOne
   private Company company;
 }

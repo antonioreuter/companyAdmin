@@ -25,9 +25,9 @@
 
   <logger name="org.apache" level="WARN"/>
   <logger name="org.springframework" level="INFO"/>
-  <logger name="com.company.admin" level="DEBUG"/>
+  <logger name="com.company.admin" level="INFO"/>
 
-  <root level="DEBUG">
+  <root level="INFO">
     <appender-ref ref="STDOUT"/>
     <appender-ref ref="ASYNC-FILE"/>
   </root>

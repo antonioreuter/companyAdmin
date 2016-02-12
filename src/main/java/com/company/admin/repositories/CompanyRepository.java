@@ -16,7 +16,7 @@ import java.util.List;
 @Repository
 public interface CompanyRepository extends PagingAndSortingRepository<Company, Long> {
 
-  Page<Company> findAll(Pageable pageable);
+  Page<Company> findAllByNameContainingIgnoreCase(String name, Pageable pageable);
 
   List<Company> findByName(@Param("name") String name);
 }
