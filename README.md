@@ -1,0 +1,3 @@
+# companyAdmin
+Company Admin - POC to demonstrate a well designed WEB API 
+...
