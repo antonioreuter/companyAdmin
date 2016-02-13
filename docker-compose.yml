@@ -1,0 +1,18 @@
+web:
+  build: .
+  command: 'bash -c ''java -Dserver.port=$PORT -jar target/companyAdmin-1.0.0-SNAPSHOT.jar'''
+  working_dir: /app/user
+  environment:
+    PORT: 8080
+  ports:
+    - '8080:8080'
+shell:
+  build: .
+  command: bash
+  working_dir: /app/user
+  environment:
+    PORT: 8080
+  ports:
+    - '8080:8080'
+  volumes:
+    - '.:/app/user'
