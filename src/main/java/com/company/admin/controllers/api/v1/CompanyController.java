@@ -39,7 +39,7 @@ public class CompanyController {
   @RequestMapping(method = RequestMethod.GET, value = "/{id}")
   @ResponseBody
   public Company show(@PathVariable("id") long id) {
-    log.info("Show company id: {id}", id);
+    log.info("Show company id: {}", id);
 
     return companyService.findById(id);
   }
@@ -50,7 +50,7 @@ public class CompanyController {
   @ResponseBody
   public Company save(@RequestBody Company company) {
     companyService.save(company);
-    log.info("Saved company -> {company}", company);
+    log.info("Saved company -> {}", company);
 
     return company;
   }
@@ -60,7 +60,7 @@ public class CompanyController {
   @ResponseStatus(HttpStatus.OK)
   @ResponseBody
   public Company update(@PathVariable("id") long id, @RequestBody Company company) {
-    log.info("Update company id: {id} -> {company}", id, company);
+    log.info("Update company id: {} -> {}", id, company);
     companyService.save(company);
 
     return company;
@@ -71,7 +71,7 @@ public class CompanyController {
   @ResponseStatus(HttpStatus.OK)
   @ResponseBody
   public void delete(@PathVariable("id") long id) {
-    log.info("Delete company {id}.", id);
+    log.info("Delete company {}.", id);
     companyService.delete(id);
   }
 

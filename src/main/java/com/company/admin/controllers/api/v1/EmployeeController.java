@@ -27,7 +27,7 @@ public class EmployeeController {
   @RequestMapping(method = RequestMethod.GET, value = "/{id}")
   @ResponseBody
   public Employee show(@PathVariable("id") long id) {
-    log.info("Find employee by ID: {id}.", id);
+    log.info("Find employee by ID: {}.", id);
     return employeeService.findById(id);
   }
 
