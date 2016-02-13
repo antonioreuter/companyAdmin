@@ -1,0 +1,21 @@
+{
+  "name": "companyAdmin",
+  "homepage": "https://github.com/antonioreuter/companyAdmin",
+  "authors": [
+    "Antonio Reuter <antonio.andrade0@walmart.com>"
+  ],
+  "description": "companyAdmin Client",
+  "main": "",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
