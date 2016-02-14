@@ -35,7 +35,6 @@ module.exports = function (grunt) {
             coffee: {
                 compileJoined: {
                     options: {
-                        bare: true,
                         join: true
                     },
                     files: {

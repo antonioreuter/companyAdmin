@@ -1,1 +1,1 @@
-angular.module 'companyAdmin', ['companyModule']
+angular.module 'companyAdmin', ['ngRoute', 'ngResource']
