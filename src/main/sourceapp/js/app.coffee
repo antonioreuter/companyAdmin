@@ -1,0 +1,1 @@
+alomundo = () -> alert("Alo Mundo!!!")

@@ -34,8 +34,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   public void configure(WebSecurity web) throws Exception {
     web
         .ignoring()
-        .antMatchers("/**/*.html",
-            "/static/**", "/**/*.ico");
+        .antMatchers(
+            "/js/**",
+            "/css/**",
+            "/images/**",
+            "/**/*.html",
+            "/**/*.ico");
   }
 
   @Override
@@ -43,7 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     httpSecurity.csrf().disable()
         .authorizeRequests()
         .antMatchers("/version", "/health", "/error").permitAll()
-        .antMatchers("/**").authenticated()
+        .antMatchers("/api/**").authenticated()
         .and()
         .httpBasic();
   }

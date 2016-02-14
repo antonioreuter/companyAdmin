@@ -1,1 +1,0 @@
-angular.module 'companyAdmin', ['companiesModule']
