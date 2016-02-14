@@ -1,1 +1,1 @@
-alomundo = () -> alert("Alo Mundo!!!")
+angular.module 'companyAdmin', ['companyModule']

@@ -6,7 +6,7 @@
   <groupId>com.company.admin</groupId>
   <artifactId>companyAdmin</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <!--<packaging>jar</packaging>-->
+  <packaging>jar</packaging>
 
   <name>companyAdmin</name>
   <description>Company Admin Demo</description>
@@ -25,19 +25,21 @@
   </properties>
 
   <dependencies>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -130,7 +132,6 @@
         <version>0.0.27</version>
 
         <executions>
-
           <execution>
             <id>install node and npm</id>
             <goals>
@@ -173,11 +174,8 @@
               <arguments>build</arguments>
             </configuration>
           </execution>
-
         </executions>
       </plugin>
     </plugins>
   </build>
-
-
 </project>

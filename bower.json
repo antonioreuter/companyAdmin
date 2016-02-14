@@ -4,7 +4,7 @@
   "appPath": "src/main/webapp",
   "homepage": "https://github.com/antonioreuter/companyAdmin",
   "authors": [
-    "Antonio Reuter <antonio.andrade0@walmart.com>"
+    "Antonio Reuter <antonioreuter@gmail.com>"
   ],
   "description": "companyAdmin Client",
   "dependencies": {
