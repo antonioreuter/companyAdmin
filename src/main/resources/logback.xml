@@ -12,7 +12,7 @@
   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <prudent>true</prudent>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <fileNamePattern>/var/log/companyAdmin/companyAdmin.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <fileNamePattern>companyAdmin.%d{yyyy-MM-dd}.log</fileNamePattern>
       <maxHistory>5</maxHistory>
     </rollingPolicy>
     <encoder>
