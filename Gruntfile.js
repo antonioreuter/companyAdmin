@@ -55,6 +55,7 @@ module.exports = function (grunt) {
                             'bower_components/angular/angular.js',
                             'bower_components/angular-resource/angular-resource.js',
                             'bower_components/angular-route/angular-route.js',
+                            'bower_components/angular-base64/angular-base64.js',
                             'bower_components/bootstrap/dist/js/bootstrap.js'
                         ]
                     }
@@ -72,6 +73,7 @@ module.exports = function (grunt) {
                             'bower_components/angular/angular.js',
                             'bower_components/angular-resource/angular-resource.js',
                             'bower_components/angular-route/angular-route.js',
+                            'bower_components/angular-base64/angular-base64.js',
                             'bower_components/bootstrap/dist/js/bootstrap.js'
                         ]
                     }
