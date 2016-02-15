@@ -1,9 +1,11 @@
 (function() {
   angular.module('companyAdmin', ['ngRoute', 'ngResource', 'base64']).config(function($routeProvider) {
     return $routeProvider.when("/main", {
-      templateUrl: "partials/company/index.html"
+      templateUrl: "partials/companies/index.html"
     }).when("/companies/:id", {
-      templateUrl: "partials/company/detail.html"
+      templateUrl: "partials/companies/detail.html"
+    }).when("/employees/:id", {
+      templateUrl: "partials/employees/detail.html"
     }).otherwise({
       redirectTo: "/main"
     });
@@ -16,6 +18,7 @@
     $scope.company = {};
     $scope.message = "";
     $scope.edit = false;
+    $scope.companyId = $routeParams.id;
     onComplete = function(response) {
       $scope.company = response.data;
       return $scope;
@@ -23,11 +26,6 @@
     onError = function(reason) {
       $scope.message = "Could not get the companies! " + reason;
       return $scope;
-    };
-    $scope.findEmployees = function(id) {
-      return $http.get("/api/v1/employees/company/" + id).then(function(response) {
-        return $scope.employees = response.data.content;
-      });
     };
     $scope.enableEdit = function() {
       return $scope.edit = true;
@@ -46,11 +44,11 @@
         data: $scope.company
       };
       return $http(req).then(function() {
-        return $scope.message = "Company saved successfully!";
+        $scope.message = "Company saved successfully!";
+        return $scope.edit = false;
       });
     };
-    find($routeParams.id);
-    $scope.findEmployees($routeParams.id);
+    find($scope.companyId);
     return $scope;
   });
 
@@ -76,6 +74,32 @@
       $scope.message = "";
       return $http.get("/api/v1/companies?name=" + searchTerm).then(onComplete, onError);
     };
+    return $scope;
+  });
+
+  angular.module('companyAdmin').controller('EmployeeIndexController', function($scope, $http, $location) {
+    var onComplete, onError;
+    $scope.employees = [];
+    $scope.searchTerm = "";
+    onComplete = function(response) {
+      $scope.employees = response.data.content;
+      if ($scope.employees.length === 0) {
+        $scope.message = "Could not find any employee.";
+      }
+      return $scope;
+    };
+    onError = function(reason) {
+      $scope.message = "Could not get the companies! " + reason;
+      return $scope;
+    };
+    $scope.viewDetail = function(id) {
+      return $location.path("/employees/" + id);
+    };
+    $scope.searchByCompany = function(companyId) {
+      $scope.message = "";
+      return $http.get("/api/v1/employees/company/" + companyId).then(onComplete, onError);
+    };
+    $scope.searchByCompany($scope.companyId);
     return $scope;
   });
 

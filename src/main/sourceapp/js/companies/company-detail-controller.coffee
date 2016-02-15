@@ -3,6 +3,7 @@ angular.module 'companyAdmin'
   $scope.company = {}
   $scope.message = ""
   $scope.edit = false
+  $scope.companyId = $routeParams.id
 
   onComplete = (response) ->
     $scope.company = response.data
@@ -11,10 +12,6 @@ angular.module 'companyAdmin'
   onError = (reason) ->
     $scope.message = "Could not get the companies! #{reason}"
     $scope
-
-  $scope.findEmployees = (id) ->
-    $http.get("/api/v1/employees/company/#{id}").then (response) ->
-      $scope.employees = response.data.content
 
   $scope.enableEdit = () ->
     $scope.edit = true
@@ -33,8 +30,8 @@ angular.module 'companyAdmin'
     }
     $http(req).then ()->
       $scope.message = "Company saved successfully!"
+      $scope.edit = false
 
-  find($routeParams.id)
-  $scope.findEmployees($routeParams.id)
+  find($scope.companyId)
 
   $scope
