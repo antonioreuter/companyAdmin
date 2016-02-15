@@ -16,6 +16,9 @@ angular.module 'companyAdmin'
   $scope.viewDetail = (id) ->
     $location.path "/employees/#{id}"
 
+  $scope.newEmployee = () ->
+    $location.path "/companies/#{$scope.companyId}/employees/new"
+
   $scope.searchByCompany = (companyId) ->
     $scope.message = ""
     $http.get("/api/v1/employees/company/#{companyId}").then onComplete, onError

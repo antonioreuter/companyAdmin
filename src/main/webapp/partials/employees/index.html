@@ -1,7 +1,7 @@
 <div ng-controller="EmployeeIndexController">
     <h2>Employees</h2>
     <div class="pull-right">
-        <input type="button" value="New Employee" class="btn btn-primary btn-sm">
+        <input type="button" value="New Employee" class="btn btn-primary btn-sm" ng-click="newEmployee()">
     </div>
     <table class="table table-striped table-hover">
         <thead>
@@ -16,8 +16,9 @@
         <tr ng-repeat="employee in employees | orderBy:'name'">
             <td>{{employee.name}}</td>
             <td>{{employee.email}}</td>
-            <td>{{employee.phone}}</td>
-            <td><input type="button" value="Detail" class="btn btn-primary btn-xs"></td>
+            <td>{{employee.phoneNumber}}</td>
+            <td><input type="button" value="Detail" class="btn btn-primary btn-xs" ng-click="viewDetail(employee.id)">
+            </td>
         </tr>
         </tbody>
     </table>

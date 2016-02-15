@@ -10,7 +10,7 @@ angular.module 'companyAdmin'
     $scope
 
   onError = (reason) ->
-    $scope.message = "Could not get the companies! #{reason}"
+    $scope.message = "Could not get the company! #{reason}"
     $scope
 
   $scope.enableEdit = () ->
