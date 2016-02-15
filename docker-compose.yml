@@ -1,6 +1,6 @@
 web:
   build: .
-  command: 'bash -c ''java -Xms128m -Xmx256m -Dserver.port=$PORT -jar target/companyAdmin-1.0.0-SNAPSHOT.jar'''
+  command: 'bash -c ''java -Xms64m -Xmx128m -Dserver.port=$PORT -jar target/companyAdmin-1.0.0-SNAPSHOT.jar'''
   working_dir: /app/user
   environment:
     PORT: 8080
