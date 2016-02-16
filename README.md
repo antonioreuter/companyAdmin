@@ -54,6 +54,7 @@ You can find the application running on (http://localhost:8080)
 ### The Application
 #### Notes:
 1- Here you will find basically two features, register and manage companies and their employees.
+
 2- When the application is initialized I preload it with two companies and a few employees on each of them.
 
 ## Web Api Documentation
@@ -77,7 +78,8 @@ password: **123456**
 ## Considerations
 
 - As I mentioned before, this project it's just a POC, so we don't worry about to apply a mechanism more sophisticated for authentication, so here I've chosen the simplest one: the Basic Authentication.
-If you want to see another approaches about authentication, check it out this repository: https://github.com/antonioreuter/hateoas-oms-sec. 
+
+    -   If you want to see another approaches about authentication, check it out this repository: https://github.com/antonioreuter/hateoas-oms-sec. 
 There you can find an implementation of Spring-HATEOAS with Spring-Security.
 
 - I could have two different projects here, with the client side and the backend running separately. However,
