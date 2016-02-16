@@ -87,6 +87,6 @@ as we wanted to run this app on **Heroku**, we decided to keep them into a singl
 
 - In the first screen I did not implement the client side pagination, however this functionality is supported by the Web API.
 
-- I decide to use an embedded database in memory.
+- I decided to use an embedded database in memory.
 
 - I did not implement tests on client side, even though you can find a few of them in the backend.
