@@ -14,6 +14,8 @@ Here, you may see an example of integration between a client side application wr
     - Spring Actuator
 - h2 (embedded database) *remember, it's just a POC*
 - Swagger
+- Mockito
+- Junit
 
 ##### Client
 - Automation:
@@ -70,10 +72,12 @@ password: 123456
 
     -   You may find another approach about authentication in this [repository](https://github.com/antonioreuter/hateoas-oms-sec). There you can find an application implementing Spring-HATEOAS with Spring-Security.
 
-- The project could be divided into two different applications, one with the javascript client and another just with the backend, running separately. However to make the things easier, they were putted together into the same project to be deployed in just one package on **Heroku**.
+- The project could be divided into two different applications, one with the javascript client and another just with the backend, running separately. However to keep things simple, they were put together into the same project to be deployed in just one package on **Heroku**.
 
-- In the first screen it's not implemented the client side pagination, however this functionality is supported by the Web API.
+- the client side pagination is not implemented in the first screen, inspite the fact that this functionality is supported by the Web API.
 
-- The application runs with an embedded database in memory, just to avoid unecessaruy confiurations.
+- The application runs with an embedded database in memory, just to avoid unnecessary configuration.
 
-- The tests on client side weren't implemented, even though you can find a few of them in the backend.
+- The tests on client side weren't implemented.
+
+- There are some tests on backend, but it's not covering the entire application. 
