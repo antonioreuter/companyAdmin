@@ -51,6 +51,9 @@ You can find the application running in your [localhost](http://localhost:8080)
 
 2. When the application is initialized, it'll be preloaded with two companies and a few employees on each of them.
 
+3. To see all the companies already registred, you need to press **search** button with the *search field* blank.
+
+
 ## Web Api Documentation
 
 The application uses Swagger to document the API, you may find it here [documentation](http://localhost:8080/swagger-ui.html). There you can see examples about how to use the Web Api with a built in client.
