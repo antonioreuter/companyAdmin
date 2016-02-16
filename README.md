@@ -35,14 +35,6 @@ Executing the command below, it'll install all the project dependencies.
     mvn clean install
 ```
 
-After install all the components, you will notice some new folders under the root folder. All of them already are into the .gitignore file.
-They will be necessary to build our JavaScript Client.
-
-- bower_components
-- node
-- node_modules
-
-
 ### Running
 
 ```
@@ -61,7 +53,7 @@ You can find the application running on (http://localhost:8080)
 
 As I mentioned before, in the **Requirements** section, we are using Swagger. A Java library that helps us to build an elegant documentation about our WEB Api.
 
-You can check it out more ont http://localhost:8080/swagger-ui.html
+You can check it out more here: http://localhost:8080/swagger-ui.html
 There you can see a lot of examples about how to use the Web Api with a built in client.
 
 ## Online
