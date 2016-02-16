@@ -1,7 +1,7 @@
 package com.company.admin.services;
 
-import com.company.admin.controllers.exceptions.ResourceNotFoundException;
-import com.company.admin.controllers.exceptions.UnprocessableEntityException;
+import com.company.admin.exceptions.ResourceNotFoundException;
+import com.company.admin.exceptions.UnprocessableEntityException;
 import com.company.admin.models.Company;
 import com.company.admin.repositories.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
