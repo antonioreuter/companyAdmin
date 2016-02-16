@@ -1,7 +1,7 @@
 # Company Admin
 
-An example of a Web Application for manage Companies and Employees.
-Here, you may see an example of integration between a client side written in Javascript with a backend written in Java with Spring MVC, exposing a Web Api based on Rest.
+An example of a Web Application to manage Companies and Employees.
+Here, you may see an example of integration between a client side application written in Javascript with a backend application written in Java with Spring MVC, exposing a Web Api based on Rest.
 
 #### Technologies
 ##### Backend
@@ -29,7 +29,7 @@ Here, you may see an example of integration between a client side written in Jav
 - JDK 1.8
 - Maven
 
-Executing the command below, it'll install all the project dependencies.
+Executing the command below, it'll install all the project dependencies and build the package.
 
 ```
     mvn clean package
@@ -51,7 +51,7 @@ You can find the application running in your [localhost](http://localhost:8080)
 
 ## Web Api Documentation
 
-The application uses Swagger to document the API, you may find it here [documentation](http://localhost:8080/swagger-ui.html). There you can see examples of how to use the Web Api with a built in client.
+The application uses Swagger to document the API, you may find it here [documentation](http://localhost:8080/swagger-ui.html). There you can see examples about how to use the Web Api with a built in client.
 
 ## Try Online
 There is a sample running on **Heroku** at this [link](https://stark-reef-70759.herokuapp.com).
@@ -66,9 +66,9 @@ password: 123456
 
 ## Considerations
 
-- This project it's just a POC, so the security strategy chosen to aplly here was the simplest one: the Basic Authentication.
+- This project it's just a POC, so the security strategy chosen to apply here was the simplest one: the Basic Authentication.
 
-    -   If you may find another approaches about authentication on this [repository](https://github.com/antonioreuter/hateoas-oms-sec). There you can find an implementation of Spring-HATEOAS with Spring-Security.
+    -   You may find another approach about authentication in this [repository](https://github.com/antonioreuter/hateoas-oms-sec). There you can find an application implementing Spring-HATEOAS with Spring-Security.
 
 - The project could be divided into two different applications, one with the javascript client and another just with the backend, running separately. However to make the things easier, they were putted together into the same project to be deployed in just one package on **Heroku**.
 
