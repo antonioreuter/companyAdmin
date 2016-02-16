@@ -55,9 +55,9 @@ The application uses Swagger to document the API, you may find it here [document
 
 ## Try Online
 There is a sample running on **Heroku** at this [link](https://stark-reef-70759.herokuapp.com).
-There you can find also our [Web Api Documentation Online](https://stark-reef-70759.herokuapp.com/swagger-ui.html)
+There you can find also our [Web Api Documentation](https://stark-reef-70759.herokuapp.com/swagger-ui.html)
 
-When you try to access the Web Api Services a prompt may pop-up for you. If so,  you need to enter with the credentials below to authenticate yourself before start to use the web api services.
+When you try to access the Web Api Services directly or through the [Web Api Documentation](https://stark-reef-70759.herokuapp.com/swagger-ui.html) a prompt may pop-up for you. If so,  you need to enter the credentials below to authenticate yourself before start to use the web api services.
 ```
 username: services
 
@@ -66,10 +66,9 @@ password: 123456
 
 ## Considerations
 
-- This project it's just a POC, so the security strategy applied here was the simplest one: the Basic Authentication.
+- This project it's just a POC, so the security strategy chosen to aplly here was the simplest one: the Basic Authentication.
 
-    -   If you want to see another approaches about authentication, check it out this repository: https://github.com/antonioreuter/hateoas-oms-sec. 
-There you can find an implementation of Spring-HATEOAS with Spring-Security.
+    -   If you may find another approaches about authentication on this [repository](https://github.com/antonioreuter/hateoas-oms-sec). There you can find an implementation of Spring-HATEOAS with Spring-Security.
 
 - The project could be divided into two different applications, one with the javascript client and another just with the backend, running separately. However to make the things easier, they were putted together into the same project to be deployed in just one package on **Heroku**.
 
