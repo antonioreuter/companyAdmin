@@ -52,18 +52,16 @@ They will be necessary to build our JavaScript Client.
 You can find the application running on (http://localhost:8080)
 
 ### The Application
-
-Here you will find basically two features, register and manage companies and their employees.
-When the application is initialized I preload it with two companies and a few employees on each of them.
+#### Notes:
+1- Here you will find basically two features, register and manage companies and their employees.
+2- When the application is initialized I preload it with two companies and a few employees on each of them.
 
 ## Web Api Documentation
 
-As I mentioned before, in the **Requirements** section, we are using Swagger.
-A Java library to helps us to build an elegant documentation about our WEB Api.
+As I mentioned before, in the **Requirements** section, we are using Swagger. A Java library that helps us to build an elegant documentation about our WEB Api.
 
 You can check it out more ont http://localhost:8080/swagger-ui.html
-There you can see a lot of examples about how to use the Web Api with a
-built in client.
+There you can see a lot of examples about how to use the Web Api with a built in client.
 
 ## Online
 There is a sample running on **Heroku** at this link: https://stark-reef-70759.herokuapp.com .
@@ -78,9 +76,9 @@ password: **123456**
 
 ## Considerations
 
-- As I mentioned before, this project it's just a POC, so we don't worry about
-to apply a mechanism more sophisticated for authentication, so here I've chosen the simplest one: the Basic Authentication.
-If you want to see another approaches about authentication, check it out this repository: https://github.com/antonioreuter/hateoas-oms-sec. There you can find an implementation of Spring-HATEOAS with Spring-Security.
+- As I mentioned before, this project it's just a POC, so we don't worry about to apply a mechanism more sophisticated for authentication, so here I've chosen the simplest one: the Basic Authentication.
+If you want to see another approaches about authentication, check it out this repository: https://github.com/antonioreuter/hateoas-oms-sec. 
+There you can find an implementation of Spring-HATEOAS with Spring-Security.
 
 - I could have two different projects here, with the client side and the backend running separately. However,
 as we wanted to run this app on **Heroku**, we decided to keep them into a single package, just to make our life easier.
