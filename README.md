@@ -56,7 +56,7 @@ You can find the application running in your [localhost](http://localhost:8080)
 
 ## Web Api Documentation
 
-The application uses Swagger to document the API, you may find it here [documentation](http://localhost:8080/swagger-ui.html). There you can see examples about how to use the Web Api with a built in client.
+The application uses Swagger to document the API, you may find here the [documentation](http://localhost:8080/swagger-ui.html). There you can see examples about how to use the Web Api with a built in client.
 
 ## Try Online
 There is a sample running on **Heroku** at this [link](https://stark-reef-70759.herokuapp.com).
